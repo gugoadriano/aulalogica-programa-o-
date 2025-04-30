@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        let lado1 =parseInt(prompt("Digite lado1"))
+        let lado2 =parseInt(prompt("Digite lado2"))
+        let lado3 =parseInt(prompt("Digite lado3"))
+            switch(true){
+                case ( lado1 === lado2 && lado2 === lado3):
+                console.log("É um triângulo equilatero");
+                break;
+                case ( lado1 === lado2 || lado2 === lado3 || lado1 === lado3):
+                console.log("Isósceles");
+                break;
+
+                default:
+                    console.log("Escaleno");
+
+
+            }
+    </script>
+</body>
+</html>
