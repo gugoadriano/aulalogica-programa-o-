@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const senhaCorreta= "papai"
+        let senhaDigitada= "";
+
+        while( senhaDigitada !== senhaCorreta){
+            senhaDigitada = prompt("Digite a senha:");
+            if(senhaDigitada !== senhaCorreta) {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+        alert("Acesso permitido!" + senhaDigitada);
+    
+    </script>
+</body>
+</html>

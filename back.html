@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logica da Programação</title>
-    <script src="app.js"></script>
+    
 </head>
 <body> 
-   <h1> Resultado esta no console</h1>
+   <script>
+    
+let soma = 0;
+let numero;
+
+while (true) {
+numero = parseFloat(prompt("Digite um número (0 para sair):"));
+
+if (numero === 0) {
+break;
+}
+
+if (!isNaN(numero)) {
+soma += numero;
+} else {
+alert("Digite um número válido!");
+}
+}
+
+alert("A soma total é: " + soma);
+   </script>
 </body>
 </html>
