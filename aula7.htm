@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+
+function calcularConsumoMedio(distancia, litros) {
+if (litros === 0) {
+return "Não é possível dividir por zero.";
+}
+return distancia / litros;
+}
+
+
+const distanciaPercorrida = 400; 
+const litrosConsumidos = 20; 
+
+const consumoMedio = calcularConsumoMedio(distanciaPercorrida, litrosConsumidos);
+console.log(`O consumo médio do carro é: ${consumoMedio} km/l`);
+    </script>
+</body>
+</html>

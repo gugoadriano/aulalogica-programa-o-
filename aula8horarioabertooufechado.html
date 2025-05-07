@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let horario= parseInt(prompt("digite horario de atendimento:"));
+        function verificarhorario(horario){
+        if(horario >= 8 && horario <= 18){
+         return "Bem vindo, nossa  loja esta aberta. "
+        }else{
+         return "Desculpa, estamos fechados! "
+         }
+        }
+       alert(verificarhorario(horario))
+    </script>
+</body>
+</html>
