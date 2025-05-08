@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Selecione a cor do produto:</h2>
+
+<select id="selecaoCor">
+<option value="vermelho">Vermelho</option>
+<option value="azul">Azul</option>
+<option value="preto">Preto</option>
+</select>
+
+<p>Preço: <span id="precoProduto">R$ 10,00</span></p>
+
+<script>
+const selecao = document.getElementById("selecaoCor");
+const precoSpan = document.getElementById("precoProduto");
+
+const precos = {
+vermelho: "R$ 120,00",
+azul: "R$ 150,00",
+preto: "R$ 135,00"
+};
+
+// Atualiza o preço quando o usuário muda a cor
+selecao.addEventListener("change", function () {
+const corSelecionada = selecao.value;
+precoSpan.textContent = precos[corSelecionada];
+});
+
+// Definir o preço inicial
+precoSpan.textContent = precos[selecao.value];
+</script>
+</body>
+</html>
