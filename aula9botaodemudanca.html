@@ -7,13 +7,22 @@
 </head>
 <body>
     <h1 id="tituloPostagem">Tudo por 10</h1>
-<button onclick="alterarTitulo()">Alterar Título</button>
+<button onclick="alterarTitulo()" >Alterar Título</button>
 
 
 <script>
+    let tituloOriginal= "Tudo por 10";
+    let tituloAlterado= "mais não leva nada"
+
 function alterarTitulo() {
 let titulo = document.getElementById("tituloPostagem");
-titulo.textContent = "Tudo por 20";
+
+
+if (titulo.textContent == tituloOriginal) {
+    titulo.textContent = tituloAlterado;
+} else {
+    titulo.textContent = tituloOriginal;
+}
 }
 </script>
 </body>

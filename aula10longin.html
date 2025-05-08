@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Digite seu nome:</h2>
+<input type="text" id="nomeUsuario" placeholder="Seu nome aqui">
+<button onclick="exibirMensagem()">Enviar</button>
+
+<p id="mensagemBoasVindas"></p>
+
+<script>
+function exibirMensagem() {
+let nome = document.getElementById("nomeUsuario").value;
+let  mensagem = "Bem-vindo, " + nome + "!";
+document.getElementById("mensagemBoasVindas").textContent = mensagem;
+}
+</script>
+</body>
+</html>
