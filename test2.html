@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Fatorial</title>
+</head>
+<body>
+    <h2>Calcular Fatorial</h2>
+    <input type="number" id="numero" placeholder="Digite um número" min="0">
+    <button onclick="calcularFatorial()">Calcular</button>
+    <p>Resultado: <span id="resultadoFatorial"></span></p>
+
+    <script>
+        function calcularFatorial() {
+            const numero = parseInt(document.getElementById("numero").value);
+            let resultado = 1;
+
+            if (numero < 0) {
+                document.getElementById("resultadoFatorial").textContent = "Número inválido!";
+                return;
+            }
+
+            for (let i = 1; i <= numero; i++) {
+                resultado *= i;
+            }
+
+            document.getElementById("resultadoFatorial").textContent = resultado;
+        }
+    </script>
+</body>
+</html>
