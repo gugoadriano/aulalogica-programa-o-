@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Bloqueado</title>
+   
+  
+    
+</head>
+<body>
+    
+    <button onclick="desativarBotao()" id="botaoEviar">Enviar</button>
+    <button onclick="resetar()">Retorna</button>
+
+    <script>
+        function desativarBotao() {
+            let botao = document.getElementById("botaoEviar");
+            botao.disabled = true; 
+            botao.style.backgroundColor = "#css"; 
+            botao.style.color = "blue"; 
+            botao.style.fontSize = "50px";
+            botao.style.cursor="not-allowed"; 
+            botao.innerHTML = "ENVIADO"; 
+        }function resetar() {
+            let botaaoDesbloqueado
+            
+     
+        }
+    </script>
+</body>
+</html>
