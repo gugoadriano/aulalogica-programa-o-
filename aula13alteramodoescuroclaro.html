@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Escuro</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #ee0909;
+            color:white;
+            transition: background-color 0.1s, color 0.1s;
+        }
+
+        .modo-escuro {
+            background-color:white;
+            color: #ee0909;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Fundação Bradesco</h1>
+    <button onclick="alternarModo()">Alternar Modo</button>
+
+    <script>
+        function alternarModo() {
+            document.body.classList.toggle("modo-escuro");
+        }
+    </script>
+</body>
+</html>

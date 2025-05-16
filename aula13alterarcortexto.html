@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Tamanho da Fonte</title>
+    <style>
+        #caixa {
+           
+            color: blueviolet;
+        }
+            
+
+       
+        
+    </style>
+</head>
+<body>
+    <h1 id="caixa">Deus te ama</h1>
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="diminuirFonte()">Diminuir Fonte</button>
+
+    <script>
+        let elemento = document.getElementById("caixa");
+        let tamanhoAtual = 26
+        function aumentarFonte() {
+           
+            elemento.style.fontSize = (tamanhoAtual ++) + "px";
+        }
+
+        function diminuirFonte() {
+            
+            elemento.style.fontSize = (tamanhoAtual --) + "px";
+        }
+    </script>
+</body>
+</html>
