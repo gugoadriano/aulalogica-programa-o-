@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container {
+            height: 100%;
+            width: 0%;
+            background: #b95605;
+            transition: width 0.1s;
+            border-radius: 20px 0 0 20px;
+            color: #0f0f0f;
+            display: flex;        
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #progress {
+            width: 100%;
+            background: #06d161;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 30px;
+            margin-top: 20px;
+              display: flex;        
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <h2>Carregando...</h2>
+    <div id="progress">0%</div>
+    <script>
+        let progresso = 0;
+        let progressDiv = document.getElementById('progress');
+        let intervalo = setInterval(() => {
+            progresso++;
+            if (progresso > 100) {
+                clearInterval(intervalo);
+                 progressDiv.textContent = "Concluído!";
+            } else {
+                progressDiv.style.width = progresso + '%';
+                progressDiv.textContent = progresso + '%';
+            }
+        }, 100);
+    </script>
+</body>
+</html>

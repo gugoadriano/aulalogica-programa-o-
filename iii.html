@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Inserir Frase com HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarme de Lembrete</title>
 </head>
 <body>
-
-  <h2>Digite uma frase:</h2>
-
-
-  <input type="text" id="entradaTexto" placeholder="Digite sua frase aqui">
-  <button id="btnInserir">Inserir Frase</button>
-
-  
-  <div id="areaFrase"></div>
-
-  <script>
-    let inputTexto = document.getElementById("entradaTexto");
-    let botaoInserir = document.getElementById("btnInserir");
-    let areaFrase = document.getElementById("areaFrase");
-
-    botaoInserir.addEventListener("click", function () {
-      let texto = inputTexto.value;
-      areaFrase.innerHTML = `<p>${texto}</p>`; 
-    });
-  </script>
-
+    <h1>Alarme de lembrete</h1>
+    <input type="text" id="lembrete" placeholder="Digite o lembrete">
+    <input type="number" id="tempo" placeholder="Tempo em segundos">
+    <button onclick="iniciarAlarme()">Iniciar Alarme</button>
+    <div id="mensagem"></div>
+    <script>
+    function iniciarAlarme() {
+        let texto = document.getElementById('lembrete').value;
+        let tempo = parseInt(document.getElementById('tempo').value);
+        let msg = document.getElementById('mensagem');
+        msg.textContent = ""; // Limpa mensagem anterior
+        if (!texto || isNaN(tempo) || tempo <= 0) {
+            alert('Preencha o lembrete e um tempo válido!');
+            return;
+        }
+        setTimeout(() => {
+            msg.textContent = 'Lembrete: ' + texto;
+        }, tempo * 1000);
+    }
+    </script>
 </body>
 </html>
-

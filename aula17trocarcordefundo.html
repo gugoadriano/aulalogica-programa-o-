@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Este exercicio altera cor de seu fundo</h1>
+    <script>
+        let trocas = 0
+        let intervalo=setInterval(()=>{
+            if(document.body.style.backgroundColor == 'red'){
+                document.body.style.backgroundColor = 'blue';
+            }else{
+                document.body.style.backgroundColor = 'red';
+            }
+            trocas++;
+            if(trocas>=10){
+                clearInterval(intervalo);
+            }
+        },1000)
+    </script>
+</body>
+</html>

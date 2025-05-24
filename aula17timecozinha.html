@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        #timer {
+            font-size: 2em;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time cozinha</h1>
+    <input type="text" id="tempo" placeholder="Tempo em segundos">
+    <button id="botao">Iniciar</button>
+    <h3>Tempo restante:<span id="contador">00</span></h3>
+    
+
+    <script>
+        
+     document.getElementById('botao').addEventListener('click', function() {
+      let tempo = document.getElementById('tempo').value;
+      let contador= tempo
+
+     let intervalo = setInterval(()=>{
+        document.getElementById('contador').textContent =contador ;
+          contador--;
+        if(contador < 0){
+            clearInterval(intervalo);
+            alert("Tempo esgotado!");
+        } 
+     }, 1000)  }  );     
+    
+    </script>
+</body>
+</html>

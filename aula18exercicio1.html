@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Semáforo Simples com setTimeout</title>
+    <style>
+        .luz {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #444;
+            margin: 10px auto;
+        }
+        .acesa { box-shadow: 0 0 20px 5px; }
+        #vermelho.acesa { background: red; }
+        #amarelo.acesa { background: yellow; }
+        #verde.acesa { background: green; }
+    </style>
+</head>
+<body>
+    <h1>Aperte para exibir o conteúdo</h1>
+    <button id="botão">Clique aqui</button>
+    <p id="texto"></p>
+    <script>
+        document.getElementById('botão').addEventListener('click', () => {
+            setTimeout(() => {
+                document.getElementById('texto').textContent = 'conteudo';
+            }, 1000);
+        });
+
+    </script>
+
+    
+</body>
+</html>

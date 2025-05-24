@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="semaforo">
+        <div class="luz vermelho" id="vermelho"></div>
+        <div class="luz amarelo" id="amarelo"></div>
+        <div class="luz verde" id="verde"></div>
+         <script>
+             let atual = 0;
+             let luzes = ['vermelho', 'amarelo', 'verde'];
+            function semaforo() {
+             luzes.forEach((id, i) => {
+            document.getElementById(id).className = 'luz' + (i === atual ? ' acesa' : '');
+            });
+            atual = (atual + 1) % 3;
+        }
+        setInterval(semaforo, 1000);
+        semaforo(); 
+
+         </script> 
+</body>
+</html>
